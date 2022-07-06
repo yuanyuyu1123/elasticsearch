@@ -1,0 +1,23 @@
+# 指定集群名称 3个节点必须一致
+cluster.name: es-cluster
+# # 指定节点名称 每个节点名字唯一
+node.name: node-2
+# # 开放远程链接
+network.host: 0.0.0.0
+# # 指定使用发布地址进行集群间通信
+network.publish_host: 192.168.2.105
+# # 指定 web 端口
+http.port: 9202
+# # 指定 tcp 端口
+transport.port: 9302
+# # 指定所有节点的 tcp 通信
+discovery.seed_hosts: ["192.168.2.105:9301", "192.168.2.105:9302","192.168.2.105:9303"]
+# # 指定可以初始化集群的节点名称
+cluster.initial_master_nodes: ["node-1", "node-2","node-3"]
+# # 集群最少几个几点可用
+gateway.recover_after_data_nodes: 2
+# # 解决跨域问题
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+#ssl
+xpack.security.enabled: false

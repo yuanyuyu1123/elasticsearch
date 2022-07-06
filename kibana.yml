@@ -1,0 +1,7 @@
+# kibana配置文件 连接到ES
+server.host: 0.0.0.0
+server.shutdownTimeout: "5s"
+#链接任意节点即可
+elasticsearch.hosts: "http://192.168.2.105:9201"
+server.port: 5601
+monitoring.ui.container.elasticsearch.enabled: true
